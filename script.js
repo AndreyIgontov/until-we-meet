@@ -47,8 +47,8 @@ function updateCountdown() {
 
         // Update alternative formats
         elements.totalHours.textContent = totalHours.toLocaleString();
-        elements.totalMinutes.textContent = totalMinutes.toLocaleString();
-        elements.totalSeconds.textContent = totalSeconds.toLocaleString();
+        elements.totalMinutes.textContent = totalMinutes;
+        elements.totalSeconds.textContent = totalSeconds;
     }
 }
 
