@@ -25,8 +25,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     min-height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
@@ -36,7 +35,11 @@ body {
 }
 
 .container {
-    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 3rem;
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(10px);
@@ -81,6 +84,7 @@ h1 {
     transition: all 0.3s ease;
     animation: pulse 2s infinite;
     text-shadow: none;
+    text-align: center;
 }
 
 .countdown-item:hover span {
@@ -100,6 +104,9 @@ h1 {
     font-weight: 500;
     animation: none;
     color: rgba(255, 255, 255, 0.85);
+    width: 100%;
+    text-align: center;
+    min-width: 120px;
 }
 
 .timezone-info {
@@ -118,6 +125,58 @@ h1 {
 .timezone-info:hover {
     opacity: 1;
     transform: scale(1.01);
+}
+
+.alternative-formats {
+    margin-top: 2.5rem;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.alt-time {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.2rem 2rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.alt-time:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.alt-time span {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0 0.5rem;
+    min-width: 80px;
+    display: inline-block;
+}
+
+.page-footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    transition: opacity 0.3s ease;
+}
+
+.page-footer:hover {
+    opacity: 0.9;
 }
 
 @media (max-width: 768px) {
@@ -150,5 +209,19 @@ h1 {
     .timezone-info {
         font-size: 0.95rem;
         padding: 0.7rem 1rem;
+    }
+
+    .alternative-formats {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .alt-time {
+        padding: 1rem 1.5rem;
+    }
+
+    .alt-time span {
+        font-size: 1.6rem;
+        min-width: 60px;
     }
 } 

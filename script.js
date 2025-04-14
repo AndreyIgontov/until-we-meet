@@ -6,36 +6,54 @@ function updateCountdown() {
     // Calculate the time difference
     const diff = targetDate.getTime() - now.getTime();
 
-    // Debug logging
-    console.log('Target date:', targetDate.toISOString());
-    console.log('Current date:', now.toISOString());
-    console.log('Time difference (ms):', diff);
-
-    // Check if the countdown has ended
-    if (diff <= 0) {
-        console.log('Countdown ended because diff <= 0');
-        document.querySelector('.countdown').innerHTML = '<h2>The time has come!</h2>';
-        return;
-    }
-
-    // Calculate days, hours, minutes, and seconds
+    // Calculate all time units
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-    // Debug logging
-    console.log('Countdown:', { days, hours, minutes, seconds });
+    // Calculate total values
+    const totalHours = Math.floor(diff / (1000 * 60 * 60));
+    const totalMinutes = Math.floor(diff / (1000 * 60));
+    const totalSeconds = Math.floor(diff / 1000);
 
-    // Update the DOM with padded numbers
-    document.getElementById('days').textContent = String(days).padStart(2, '0');
-    document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-    document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-    document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    // Get all elements
+    const elements = {
+        days: document.getElementById('days'),
+        hours: document.getElementById('hours'),
+        minutes: document.getElementById('minutes'),
+        seconds: document.getElementById('seconds'),
+        totalHours: document.getElementById('total-hours'),
+        totalMinutes: document.getElementById('total-minutes'),
+        totalSeconds: document.getElementById('total-seconds'),
+        countdown: document.querySelector('.countdown')
+    };
+
+    // Check if elements exist
+    if (Object.values(elements).some(el => !el)) {
+        console.error('Required elements not found');
+        return;
+    }
+
+    // Update the display
+    if (diff <= 0) {
+        elements.countdown.innerHTML = '<h2>The time has come!</h2>';
+    } else {
+        // Update main countdown
+        elements.days.textContent = String(days).padStart(2, '0');
+        elements.hours.textContent = String(hours).padStart(2, '0');
+        elements.minutes.textContent = String(minutes).padStart(2, '0');
+        elements.seconds.textContent = String(seconds).padStart(2, '0');
+
+        // Update alternative formats
+        elements.totalHours.textContent = totalHours.toLocaleString();
+        elements.totalMinutes.textContent = totalMinutes.toLocaleString();
+        elements.totalSeconds.textContent = totalSeconds.toLocaleString();
+    }
 }
 
-// Update the countdown every second
-setInterval(updateCountdown, 1000);
-
 // Initial call to avoid delay
-updateCountdown(); 
+updateCountdown();
+
+// Update the countdown every second
+setInterval(updateCountdown, 1000); 

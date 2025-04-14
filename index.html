@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Until We Meet</title>
+    <title>C&I Meetup</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Until We Meet</h1>
+        <h1>C&I meetup</h1>
         <div class="countdown">
             <div class="countdown-item">
                 <span id="days">00</span>
@@ -27,8 +27,21 @@
                 <span class="label">Seconds</span>
             </div>
         </div>
-        <p class="timezone-info">Countdown to April 17th, 18:20 (Warsaw time)</p>
+        <div class="alternative-formats">
+            <div class="alt-time">
+                or <span id="total-hours">0</span> hours
+            </div>
+            <div class="alt-time">
+                or <span id="total-minutes">0</span> minutes
+            </div>
+            <div class="alt-time">
+                or <span id="total-seconds">0</span> seconds
+            </div>
+        </div>
     </div>
+    <footer class="page-footer">
+        April 17th, 18:20 (Warsaw time)
+    </footer>
     <script src="script.js"></script>
 </body>
 </html> 
