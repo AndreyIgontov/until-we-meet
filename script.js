@@ -1,13 +1,19 @@
 function updateCountdown() {
-    // Set the target date in Warsaw timezone (UTC+2)
-    const targetDate = new Date('2025-04-17T18:20:00+02:00');
+    // Create target date in Warsaw time (UTC+2)
+    const targetDate = new Date(Date.UTC(2025, 3, 17, 16, 20, 0)); // 18:20 Warsaw time (UTC+2)
     const now = new Date();
 
     // Calculate the time difference
-    const diff = targetDate - now;
+    const diff = targetDate.getTime() - now.getTime();
+
+    // Debug logging
+    console.log('Target date:', targetDate.toISOString());
+    console.log('Current date:', now.toISOString());
+    console.log('Time difference (ms):', diff);
 
     // Check if the countdown has ended
     if (diff <= 0) {
+        console.log('Countdown ended because diff <= 0');
         document.querySelector('.countdown').innerHTML = '<h2>The time has come!</h2>';
         return;
     }
@@ -17,6 +23,9 @@ function updateCountdown() {
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    // Debug logging
+    console.log('Countdown:', { days, hours, minutes, seconds });
 
     // Update the DOM with padded numbers
     document.getElementById('days').textContent = String(days).padStart(2, '0');
