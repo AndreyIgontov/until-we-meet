@@ -1,6 +1,6 @@
 function updateCountdown() {
-    // Set the target date in Warsaw timezone
-    const targetDate = new Date('2024-04-17T18:20:00+02:00');
+    // Set the target date in Warsaw timezone (UTC+2)
+    const targetDate = new Date('2025-04-17T18:20:00+02:00');
     const now = new Date();
 
     // Calculate the time difference
@@ -18,7 +18,7 @@ function updateCountdown() {
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-    // Update the DOM
+    // Update the DOM with padded numbers
     document.getElementById('days').textContent = String(days).padStart(2, '0');
     document.getElementById('hours').textContent = String(hours).padStart(2, '0');
     document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
