@@ -1,6 +1,6 @@
 function updateCountdown() {
     // Create target date in Warsaw time (UTC+2)
-    const targetDate = new Date(Date.UTC(2025, 3, 17, 16, 20, 0)); // 18:20 Warsaw time (UTC+2)
+    const targetDate = new Date(Date.UTC(2025, 6, 14, 3, 0, 0)); // 18:20 Warsaw time (UTC+2)
     const now = new Date();
 
     // Calculate the time difference
