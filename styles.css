@@ -244,50 +244,45 @@ h1 {
         min-width: 50px;
     }
 
-    .page-footer {
-        font-size: 0.8rem;
-        padding: 0.8rem;
-    }
-
-    /* Mobile floating images - 50/50 containers with smaller images */
+    /* Mobile floating images - smaller containers to prevent cutoff on narrow screens */
     .floating-images-left,
     .floating-images-right {
-        width: 50%;
+        width: 25%;
     }
 
     .floating-item-left img,
     .floating-item-right img {
-        width: 35px;
-        height: 35px;
+        width: 30px;
+        height: 30px;
         border-radius: 6px;
         border: 1px solid rgba(255, 255, 255, 0.8);
     }
     
     .paris-text {
-        font-size: 6px;
-        top: -12px;
-        letter-spacing: 0.5px;
+        font-size: 5px;
+        top: -10px;
+        letter-spacing: 0.3px;
     }
     
     .french-flag {
-        font-size: 10px;
-        bottom: -10px;
+        font-size: 8px;
+        bottom: -8px;
     }
 
-    /* Adjust positioning to prevent cutoff - keep images within container bounds */
-    .floating-item-left:nth-child(1) { left: 5px; }
-    .floating-item-left:nth-child(2) { left: 15px; }
-    .floating-item-left:nth-child(3) { left: 25px; }
-    .floating-item-left:nth-child(4) { left: 10px; }
-    .floating-item-left:nth-child(5) { left: 20px; }
-    .floating-item-left:nth-child(6) { left: 30px; }
+    /* Conservative positioning within smaller containers */
+    .floating-item-left:nth-child(1) { left: 30%; }
+    .floating-item-left:nth-child(2) { left: 40%; }
+    .floating-item-left:nth-child(3) { left: 50%; }
+    .floating-item-left:nth-child(4) { left: 35%; }
+    .floating-item-left:nth-child(5) { left: 45%; }
+    .floating-item-left:nth-child(6) { left: 55%; }
 
-    .floating-item-right:nth-child(1) { right: 5px; }
-    .floating-item-right:nth-child(2) { right: 15px; }
-    .floating-item-right:nth-child(3) { right: 25px; }
-    .floating-item-right:nth-child(4) { right: 10px; }
-    .floating-item-right:nth-child(5) { right: 20px; }
-    .floating-item-right:nth-child(6) { right: 30px; }
+    .floating-item-right:nth-child(1) { right: 30%; }
+    .floating-item-right:nth-child(2) { right: 40%; }
+    .floating-item-right:nth-child(3) { right: 50%; }
+    .floating-item-right:nth-child(4) { right: 35%; }
+    .floating-item-right:nth-child(5) { right: 45%; }
+    .floating-item-right:nth-child(6) { right: 55%; }
 
     /* Hide some floating items on mobile for better performance */
     .floating-item-left:nth-child(n+7),
@@ -344,36 +339,36 @@ h1 {
         min-width: 40px;
     }
 
-    /* Very small floating images for small phones - 50/50 containers */
+    /* Very small floating images for small phones - even smaller containers */
     .floating-images-left,
     .floating-images-right {
-        width: 50%;
+        width: 20%;
     }
 
     .floating-item-left img,
     .floating-item-right img {
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
     }
     
     .paris-text {
-        font-size: 5px;
-        top: -10px;
+        font-size: 4px;
+        top: -8px;
     }
     
     .french-flag {
-        font-size: 8px;
-        bottom: -8px;
+        font-size: 6px;
+        bottom: -6px;
     }
 
-    /* Adjust positioning for very small screens - use pixel values */
-    .floating-item-left:nth-child(1) { left: 5px; }
-    .floating-item-left:nth-child(2) { left: 15px; }
-    .floating-item-left:nth-child(3) { left: 25px; }
+    /* Very conservative positioning for small screens */
+    .floating-item-left:nth-child(1) { left: 40%; }
+    .floating-item-left:nth-child(2) { left: 50%; }
+    .floating-item-left:nth-child(3) { left: 45%; }
 
-    .floating-item-right:nth-child(1) { right: 5px; }
-    .floating-item-right:nth-child(2) { right: 15px; }
-    .floating-item-right:nth-child(3) { right: 25px; }
+    .floating-item-right:nth-child(1) { right: 40%; }
+    .floating-item-right:nth-child(2) { right: 50%; }
+    .floating-item-right:nth-child(3) { right: 45%; }
 
     /* Show even fewer floating items on very small screens */
     .floating-item-left:nth-child(n+4),
@@ -475,12 +470,12 @@ h1 {
 }
 
 /* Left side positioning */
-.floating-item-left:nth-child(1) { left: 5%; animation-delay: 0s; }
-.floating-item-left:nth-child(2) { left: 15%; animation-delay: 4s; }
-.floating-item-left:nth-child(3) { left: 8%; animation-delay: 8s; }
-.floating-item-left:nth-child(4) { left: 12%; animation-delay: 12s; }
-.floating-item-left:nth-child(5) { left: 18%; animation-delay: 16s; }
-.floating-item-left:nth-child(6) { left: 3%; animation-delay: 20s; }
+.floating-item-left:nth-child(1) { left: 15%; animation-delay: 0s; }
+.floating-item-left:nth-child(2) { left: 25%; animation-delay: 4s; }
+.floating-item-left:nth-child(3) { left: 35%; animation-delay: 8s; }
+.floating-item-left:nth-child(4) { left: 20%; animation-delay: 12s; }
+.floating-item-left:nth-child(5) { left: 30%; animation-delay: 16s; }
+.floating-item-left:nth-child(6) { left: 40%; animation-delay: 20s; }
 .floating-item-left:nth-child(7) { left: 10%; animation-delay: 24s; }
 .floating-item-left:nth-child(8) { left: 20%; animation-delay: 28s; }
 .floating-item-left:nth-child(9) { left: 6%; animation-delay: 32s; }
@@ -488,12 +483,12 @@ h1 {
 .floating-item-left:nth-child(11) { left: 9%; animation-delay: 40s; }
 
 /* Right side positioning */
-.floating-item-right:nth-child(1) { right: 5%; animation-delay: 2s; }
-.floating-item-right:nth-child(2) { right: 15%; animation-delay: 6s; }
-.floating-item-right:nth-child(3) { right: 8%; animation-delay: 10s; }
-.floating-item-right:nth-child(4) { right: 12%; animation-delay: 14s; }
-.floating-item-right:nth-child(5) { right: 18%; animation-delay: 18s; }
-.floating-item-right:nth-child(6) { right: 3%; animation-delay: 22s; }
+.floating-item-right:nth-child(1) { right: 15%; animation-delay: 2s; }
+.floating-item-right:nth-child(2) { right: 25%; animation-delay: 6s; }
+.floating-item-right:nth-child(3) { right: 35%; animation-delay: 10s; }
+.floating-item-right:nth-child(4) { right: 20%; animation-delay: 14s; }
+.floating-item-right:nth-child(5) { right: 30%; animation-delay: 18s; }
+.floating-item-right:nth-child(6) { right: 40%; animation-delay: 22s; }
 .floating-item-right:nth-child(7) { right: 10%; animation-delay: 26s; }
 .floating-item-right:nth-child(8) { right: 20%; animation-delay: 30s; }
 .floating-item-right:nth-child(9) { right: 6%; animation-delay: 34s; }
