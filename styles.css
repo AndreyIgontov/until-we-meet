@@ -274,6 +274,21 @@ h1 {
         bottom: -15px;
     }
 
+    /* Adjust positioning to prevent cutoff - keep images within container bounds */
+    .floating-item-left:nth-child(1) { left: 10px; }
+    .floating-item-left:nth-child(2) { left: 30px; }
+    .floating-item-left:nth-child(3) { left: 5px; }
+    .floating-item-left:nth-child(4) { left: 25px; }
+    .floating-item-left:nth-child(5) { left: 15px; }
+    .floating-item-left:nth-child(6) { left: 35px; }
+
+    .floating-item-right:nth-child(1) { right: 10px; }
+    .floating-item-right:nth-child(2) { right: 30px; }
+    .floating-item-right:nth-child(3) { right: 5px; }
+    .floating-item-right:nth-child(4) { right: 25px; }
+    .floating-item-right:nth-child(5) { right: 15px; }
+    .floating-item-right:nth-child(6) { right: 35px; }
+
     /* Hide some floating items on mobile for better performance */
     .floating-item-left:nth-child(n+7),
     .floating-item-right:nth-child(n+7) {
@@ -350,6 +365,15 @@ h1 {
         font-size: 12px;
         bottom: -12px;
     }
+
+    /* Adjust positioning for very small screens - use pixel values */
+    .floating-item-left:nth-child(1) { left: 5px; }
+    .floating-item-left:nth-child(2) { left: 15px; }
+    .floating-item-left:nth-child(3) { left: 25px; }
+
+    .floating-item-right:nth-child(1) { right: 5px; }
+    .floating-item-right:nth-child(2) { right: 15px; }
+    .floating-item-right:nth-child(3) { right: 25px; }
 
     /* Show even fewer floating items on very small screens */
     .floating-item-left:nth-child(n+4),
