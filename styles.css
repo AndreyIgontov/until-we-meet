@@ -43,7 +43,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 3rem;
+    padding: 1.5rem 1rem;
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(10px);
     border-radius: 20px;
@@ -53,8 +53,8 @@ body {
 }
 
 h1 {
-    font-size: 3rem;
-    margin-bottom: 2.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
     font-weight: 600;
     letter-spacing: 1px;
     color: white;
@@ -189,60 +189,59 @@ h1 {
     }
 
     .container {
-        padding: 1rem 0.5rem;
-        margin: 0.5rem auto;
-        width: 60%;
+        padding: 1.5rem 1rem;
+        margin: 0.5rem;
+        width: 95%;
         min-height: auto;
-        max-width: 400px;
     }
 
     h1 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
         text-align: center;
     }
 
     .countdown {
         flex-wrap: wrap;
-        gap: 0.6rem;
+        gap: 0.8rem;
         justify-content: center;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
     
     .countdown-item {
-        min-width: 80px;
-        flex: 1 1 80px;
-        max-width: 100px;
+        min-width: 120px;
+        flex: 1 1 120px;
+        max-width: 140px;
     }
     
     .countdown-item span {
-        font-size: 1.6rem;
-        min-width: 60px;
-        padding: 0.6rem;
+        font-size: 2rem;
+        min-width: 80px;
+        padding: 0.8rem;
         border-radius: 8px;
     }
 
     .countdown-item .label {
-        font-size: 0.7rem;
-        margin-top: 0.4rem;
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
         letter-spacing: 1px;
     }
 
     .alternative-formats {
         max-width: 100%;
         padding: 0 0.5rem;
-        gap: 0.6rem;
-        margin-top: 1rem;
+        gap: 0.8rem;
+        margin-top: 1.5rem;
     }
 
     .alt-time {
-        padding: 0.6rem 0.8rem;
-        font-size: 0.8rem;
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
     }
 
     .alt-time span {
-        font-size: 1.2rem;
-        min-width: 40px;
+        font-size: 1.4rem;
+        min-width: 50px;
     }
 
     .page-footer {
@@ -250,29 +249,29 @@ h1 {
         padding: 0.8rem;
     }
 
-    /* Mobile floating images - increase container width for better fit */
+    /* Mobile floating images - 50/50 containers with smaller images */
     .floating-images-left,
     .floating-images-right {
-        width: 30%;
+        width: 50%;
     }
 
     .floating-item-left img,
     .floating-item-right img {
-        width: 50px;
-        height: 50px;
-        border-radius: 8px;
-        border: 2px solid rgba(255, 255, 255, 0.8);
+        width: 35px;
+        height: 35px;
+        border-radius: 6px;
+        border: 1px solid rgba(255, 255, 255, 0.8);
     }
     
     .paris-text {
-        font-size: 8px;
-        top: -15px;
+        font-size: 6px;
+        top: -12px;
         letter-spacing: 0.5px;
     }
     
     .french-flag {
-        font-size: 12px;
-        bottom: -12px;
+        font-size: 10px;
+        bottom: -10px;
     }
 
     /* Adjust positioning to prevent cutoff - keep images within container bounds */
@@ -300,72 +299,71 @@ h1 {
 /* Small mobile phones */
 @media (max-width: 480px) {
     .container {
-        padding: 0.8rem 0.4rem;
-        margin: 0.25rem auto;
-        width: 50%;
-        max-width: 300px;
+        padding: 1rem 0.5rem;
+        margin: 0.25rem;
+        width: 98%;
     }
 
     h1 {
-        font-size: 1.2rem;
-        margin-bottom: 0.8rem;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
     }
 
     .countdown {
-        gap: 0.4rem;
-        margin-bottom: 0.8rem;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
     }
     
     .countdown-item {
-        min-width: 70px;
-        flex: 1 1 70px;
+        min-width: 100px;
+        flex: 1 1 100px;
     }
     
     .countdown-item span {
-        font-size: 1.3rem;
-        min-width: 50px;
-        padding: 0.4rem;
+        font-size: 1.6rem;
+        min-width: 70px;
+        padding: 0.6rem;
     }
 
     .countdown-item .label {
-        font-size: 0.6rem;
-    }
-
-    .alternative-formats {
-        gap: 0.4rem;
-        margin-top: 0.8rem;
-    }
-
-    .alt-time {
-        padding: 0.5rem 0.6rem;
         font-size: 0.7rem;
     }
 
-    .alt-time span {
-        font-size: 1rem;
-        min-width: 35px;
+    .alternative-formats {
+        gap: 0.6rem;
+        margin-top: 1rem;
     }
 
-    /* Very small floating images for small phones */
+    .alt-time {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .alt-time span {
+        font-size: 1.2rem;
+        min-width: 40px;
+    }
+
+    /* Very small floating images for small phones - 50/50 containers */
     .floating-images-left,
     .floating-images-right {
-        width: 25%;
+        width: 50%;
     }
 
     .floating-item-left img,
     .floating-item-right img {
-        width: 40px;
-        height: 40px;
+        width: 25px;
+        height: 25px;
     }
     
     .paris-text {
-        font-size: 6px;
-        top: -12px;
+        font-size: 5px;
+        top: -10px;
     }
     
     .french-flag {
-        font-size: 10px;
-        bottom: -10px;
+        font-size: 8px;
+        bottom: -8px;
     }
 
     /* Adjust positioning for very small screens - use pixel values */
