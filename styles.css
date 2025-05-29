@@ -244,49 +244,27 @@ h1 {
         min-width: 50px;
     }
 
-    /* Mobile floating images - smaller containers to prevent cutoff on narrow screens */
-    .floating-images-left,
-    .floating-images-right {
-        width: 25%;
-    }
-
-    .floating-item-left img,
-    .floating-item-right img {
-        width: 30px;
-        height: 30px;
-        border-radius: 6px;
-        border: 1px solid rgba(255, 255, 255, 0.8);
+    /* Mobile floating images - single container with smaller images */
+    .floating-item img {
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+        border: 2px solid rgba(255, 255, 255, 0.8);
     }
     
     .paris-text {
-        font-size: 5px;
-        top: -10px;
-        letter-spacing: 0.3px;
+        font-size: 8px;
+        top: -15px;
+        letter-spacing: 0.5px;
     }
     
     .french-flag {
-        font-size: 8px;
-        bottom: -8px;
+        font-size: 12px;
+        bottom: -12px;
     }
 
-    /* Conservative positioning within smaller containers */
-    .floating-item-left:nth-child(1) { left: 30%; }
-    .floating-item-left:nth-child(2) { left: 40%; }
-    .floating-item-left:nth-child(3) { left: 50%; }
-    .floating-item-left:nth-child(4) { left: 35%; }
-    .floating-item-left:nth-child(5) { left: 45%; }
-    .floating-item-left:nth-child(6) { left: 55%; }
-
-    .floating-item-right:nth-child(1) { right: 30%; }
-    .floating-item-right:nth-child(2) { right: 40%; }
-    .floating-item-right:nth-child(3) { right: 50%; }
-    .floating-item-right:nth-child(4) { right: 35%; }
-    .floating-item-right:nth-child(5) { right: 45%; }
-    .floating-item-right:nth-child(6) { right: 55%; }
-
     /* Hide some floating items on mobile for better performance */
-    .floating-item-left:nth-child(n+7),
-    .floating-item-right:nth-child(n+7) {
+    .floating-item:nth-child(n+12) {
         display: none;
     }
 }
@@ -339,40 +317,24 @@ h1 {
         min-width: 40px;
     }
 
-    /* Very small floating images for small phones - even smaller containers */
-    .floating-images-left,
-    .floating-images-right {
-        width: 20%;
-    }
-
-    .floating-item-left img,
-    .floating-item-right img {
-        width: 20px;
-        height: 20px;
+    /* Very small floating images for small phones - single container */
+    .floating-item img {
+        width: 60px;
+        height: 60px;
     }
     
     .paris-text {
-        font-size: 4px;
-        top: -8px;
+        font-size: 6px;
+        top: -12px;
     }
     
     .french-flag {
-        font-size: 6px;
-        bottom: -6px;
+        font-size: 10px;
+        bottom: -10px;
     }
 
-    /* Very conservative positioning for small screens */
-    .floating-item-left:nth-child(1) { left: 40%; }
-    .floating-item-left:nth-child(2) { left: 50%; }
-    .floating-item-left:nth-child(3) { left: 45%; }
-
-    .floating-item-right:nth-child(1) { right: 40%; }
-    .floating-item-right:nth-child(2) { right: 50%; }
-    .floating-item-right:nth-child(3) { right: 45%; }
-
     /* Show even fewer floating items on very small screens */
-    .floating-item-left:nth-child(n+4),
-    .floating-item-right:nth-child(n+4) {
+    .floating-item:nth-child(n+8) {
         display: none;
     }
 }
@@ -415,51 +377,28 @@ h1 {
     }
 }
 
-/* Floating Paris-themed images - Left Side */
-.floating-images-left {
+/* Single floating Paris-themed images container */
+.floating-images {
     position: fixed;
     top: 0;
     left: 0;
-    width: 25%;
+    width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 10;
+    z-index: 1;
     overflow: hidden;
 }
 
-.floating-item-left {
+.floating-item {
     position: absolute;
     opacity: 0;
-    left: 10%;
     transform: scale(0.8) rotate(-5deg);
     animation: floatAndFade 15s infinite ease-in-out;
     pointer-events: none;
 }
 
-/* Floating Paris-themed images - Right Side */
-.floating-images-right {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 25%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 10;
-    overflow: hidden;
-}
-
-.floating-item-right {
-    position: absolute;
-    opacity: 0;
-    right: 10%;
-    transform: scale(0.8) rotate(-5deg);
-    animation: floatAndFade 15s infinite ease-in-out;
-    pointer-events: none;
-}
-
-/* Shared image styling */
-.floating-item-left img,
-.floating-item-right img {
+/* Single container image styling */
+.floating-item img {
     width: 180px;
     height: 180px;
     object-fit: cover;
@@ -469,31 +408,29 @@ h1 {
     filter: sepia(20%) saturate(1.2) brightness(1.1);
 }
 
-/* Left side positioning */
-.floating-item-left:nth-child(1) { left: 15%; animation-delay: 0s; }
-.floating-item-left:nth-child(2) { left: 25%; animation-delay: 4s; }
-.floating-item-left:nth-child(3) { left: 35%; animation-delay: 8s; }
-.floating-item-left:nth-child(4) { left: 20%; animation-delay: 12s; }
-.floating-item-left:nth-child(5) { left: 30%; animation-delay: 16s; }
-.floating-item-left:nth-child(6) { left: 40%; animation-delay: 20s; }
-.floating-item-left:nth-child(7) { left: 10%; animation-delay: 24s; }
-.floating-item-left:nth-child(8) { left: 20%; animation-delay: 28s; }
-.floating-item-left:nth-child(9) { left: 6%; animation-delay: 32s; }
-.floating-item-left:nth-child(10) { left: 14%; animation-delay: 36s; }
-.floating-item-left:nth-child(11) { left: 9%; animation-delay: 40s; }
-
-/* Right side positioning */
-.floating-item-right:nth-child(1) { right: 15%; animation-delay: 2s; }
-.floating-item-right:nth-child(2) { right: 25%; animation-delay: 6s; }
-.floating-item-right:nth-child(3) { right: 35%; animation-delay: 10s; }
-.floating-item-right:nth-child(4) { right: 20%; animation-delay: 14s; }
-.floating-item-right:nth-child(5) { right: 30%; animation-delay: 18s; }
-.floating-item-right:nth-child(6) { right: 40%; animation-delay: 22s; }
-.floating-item-right:nth-child(7) { right: 10%; animation-delay: 26s; }
-.floating-item-right:nth-child(8) { right: 20%; animation-delay: 30s; }
-.floating-item-right:nth-child(9) { right: 6%; animation-delay: 34s; }
-.floating-item-right:nth-child(10) { right: 14%; animation-delay: 38s; }
-.floating-item-right:nth-child(11) { right: 9%; animation-delay: 42s; }
+/* Positioning across the full screen - keeping images within viewport */
+.floating-item:nth-child(1) { left: 5%; animation-delay: 0s; }
+.floating-item:nth-child(2) { left: 15%; animation-delay: 4s; }
+.floating-item:nth-child(3) { left: 25%; animation-delay: 8s; }
+.floating-item:nth-child(4) { left: 35%; animation-delay: 12s; }
+.floating-item:nth-child(5) { left: 45%; animation-delay: 16s; }
+.floating-item:nth-child(6) { left: 55%; animation-delay: 20s; }
+.floating-item:nth-child(7) { left: 65%; animation-delay: 24s; }
+.floating-item:nth-child(8) { left: 75%; animation-delay: 28s; }
+.floating-item:nth-child(9) { left: 10%; animation-delay: 32s; }
+.floating-item:nth-child(10) { left: 20%; animation-delay: 36s; }
+.floating-item:nth-child(11) { left: 30%; animation-delay: 40s; }
+.floating-item:nth-child(12) { left: 40%; animation-delay: 44s; }
+.floating-item:nth-child(13) { left: 50%; animation-delay: 48s; }
+.floating-item:nth-child(14) { left: 60%; animation-delay: 52s; }
+.floating-item:nth-child(15) { left: 70%; animation-delay: 56s; }
+.floating-item:nth-child(16) { left: 12%; animation-delay: 60s; }
+.floating-item:nth-child(17) { left: 22%; animation-delay: 64s; }
+.floating-item:nth-child(18) { left: 32%; animation-delay: 68s; }
+.floating-item:nth-child(19) { left: 42%; animation-delay: 72s; }
+.floating-item:nth-child(20) { left: 52%; animation-delay: 76s; }
+.floating-item:nth-child(21) { left: 62%; animation-delay: 80s; }
+.floating-item:nth-child(22) { left: 72%; animation-delay: 84s; }
 
 .paris-text {
     position: absolute;
@@ -558,8 +495,7 @@ h1 {
 }
 
 @media (max-width: 768px) {
-    .floating-item-left img,
-    .floating-item-right img {
+    .floating-item img {
         width: 120px;
         height: 120px;
     }
@@ -586,8 +522,7 @@ h1 {
         scroll-behavior: auto !important;
     }
     
-    .floating-item-left,
-    .floating-item-right {
+    .floating-item {
         animation: none;
         opacity: 0.3;
         position: static;
