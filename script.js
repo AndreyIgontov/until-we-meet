@@ -56,4 +56,46 @@ function updateCountdown() {
 updateCountdown();
 
 // Update the countdown every second
-setInterval(updateCountdown, 1000); 
+setInterval(updateCountdown, 1000);
+
+// Dynamic floating images with random positioning
+function initializeFloatingImages() {
+    const floatingItems = document.querySelectorAll('.floating-item');
+    
+    floatingItems.forEach((item, index) => {
+        // Random horizontal position
+        const randomLeft = Math.random() * 80 + 10; // 10% to 90%
+        item.style.left = randomLeft + '%';
+        
+        // Random animation duration between 12-18 seconds
+        const randomDuration = Math.random() * 6 + 12;
+        item.style.animationDuration = randomDuration + 's';
+        
+        // Random delay based on index with some randomness
+        const randomDelay = (index * 2) + (Math.random() * 3);
+        item.style.animationDelay = randomDelay + 's';
+        
+        // Random rotation
+        const randomRotation = Math.random() * 20 - 10; // -10 to 10 degrees
+        item.style.transform = `rotate(${randomRotation}deg)`;
+    });
+}
+
+// Reinitialize positions every 30 seconds for more variety
+function randomizeFloatingImages() {
+    const floatingItems = document.querySelectorAll('.floating-item');
+    
+    floatingItems.forEach(item => {
+        const randomLeft = Math.random() * 80 + 10;
+        item.style.left = randomLeft + '%';
+        
+        const randomDuration = Math.random() * 6 + 12;
+        item.style.animationDuration = randomDuration + 's';
+    });
+}
+
+// Initialize floating images
+initializeFloatingImages();
+
+// Randomize positions every 30 seconds
+setInterval(randomizeFloatingImages, 30000); 

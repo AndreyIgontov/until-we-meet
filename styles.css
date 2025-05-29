@@ -224,4 +224,180 @@ h1 {
         font-size: 1.6rem;
         min-width: 60px;
     }
+
+    .floating-item-left img,
+    .floating-item-right img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .paris-text {
+        font-size: 12px;
+        top: -25px;
+    }
+    
+    .french-flag {
+        font-size: 16px;
+        bottom: -20px;
+    }
+}
+
+/* Floating Paris-themed images - Left Side */
+.floating-images-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.floating-item-left {
+    position: absolute;
+    opacity: 0;
+    left: 10%;
+    transform: scale(0.8) rotate(-5deg);
+    animation: floatAndFade 15s infinite ease-in-out;
+    pointer-events: none;
+}
+
+/* Floating Paris-themed images - Right Side */
+.floating-images-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.floating-item-right {
+    position: absolute;
+    opacity: 0;
+    right: 10%;
+    transform: scale(0.8) rotate(-5deg);
+    animation: floatAndFade 15s infinite ease-in-out;
+    pointer-events: none;
+}
+
+/* Shared image styling */
+.floating-item-left img,
+.floating-item-right img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    filter: sepia(20%) saturate(1.2) brightness(1.1);
+}
+
+/* Left side positioning */
+.floating-item-left:nth-child(1) { left: 5%; animation-delay: 0s; }
+.floating-item-left:nth-child(2) { left: 15%; animation-delay: 4s; }
+.floating-item-left:nth-child(3) { left: 8%; animation-delay: 8s; }
+.floating-item-left:nth-child(4) { left: 12%; animation-delay: 12s; }
+.floating-item-left:nth-child(5) { left: 18%; animation-delay: 16s; }
+.floating-item-left:nth-child(6) { left: 3%; animation-delay: 20s; }
+.floating-item-left:nth-child(7) { left: 10%; animation-delay: 24s; }
+.floating-item-left:nth-child(8) { left: 20%; animation-delay: 28s; }
+.floating-item-left:nth-child(9) { left: 6%; animation-delay: 32s; }
+.floating-item-left:nth-child(10) { left: 14%; animation-delay: 36s; }
+.floating-item-left:nth-child(11) { left: 9%; animation-delay: 40s; }
+
+/* Right side positioning */
+.floating-item-right:nth-child(1) { right: 5%; animation-delay: 2s; }
+.floating-item-right:nth-child(2) { right: 15%; animation-delay: 6s; }
+.floating-item-right:nth-child(3) { right: 8%; animation-delay: 10s; }
+.floating-item-right:nth-child(4) { right: 12%; animation-delay: 14s; }
+.floating-item-right:nth-child(5) { right: 18%; animation-delay: 18s; }
+.floating-item-right:nth-child(6) { right: 3%; animation-delay: 22s; }
+.floating-item-right:nth-child(7) { right: 10%; animation-delay: 26s; }
+.floating-item-right:nth-child(8) { right: 20%; animation-delay: 30s; }
+.floating-item-right:nth-child(9) { right: 6%; animation-delay: 34s; }
+.floating-item-right:nth-child(10) { right: 14%; animation-delay: 38s; }
+.floating-item-right:nth-child(11) { right: 9%; animation-delay: 42s; }
+
+.paris-text {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(45deg, #002395, #ffffff, #ed2939);
+    background-size: 300% 300%;
+    animation: frenchGradient 3s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+
+.french-flag {
+    position: absolute;
+    bottom: -25px;
+    right: -10px;
+    font-size: 20px;
+    animation: wave 2s ease-in-out infinite;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes floatAndFade {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) rotate(-5deg) translateY(100vh);
+    }
+    10% {
+        opacity: 0.8;
+        transform: scale(1) rotate(0deg) translateY(80vh);
+    }
+    50% {
+        opacity: 0.9;
+        transform: scale(1.1) rotate(2deg) translateY(20vh);
+    }
+    90% {
+        opacity: 0.8;
+        transform: scale(1) rotate(-2deg) translateY(-10vh);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.8) rotate(-5deg) translateY(-20vh);
+    }
+}
+
+@keyframes frenchGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes wave {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+}
+
+@media (max-width: 768px) {
+    .floating-item-left img,
+    .floating-item-right img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .paris-text {
+        font-size: 12px;
+        top: -25px;
+    }
+    
+    .french-flag {
+        font-size: 16px;
+        bottom: -20px;
+    }
 } 
