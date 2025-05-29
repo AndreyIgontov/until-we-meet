@@ -1,6 +1,6 @@
 function updateCountdown() {
-    // Create target date in Warsaw time (UTC+2)
-    const targetDate = new Date(Date.UTC(2025, 6, 13, 20, 0, 0)); // 18:20 Warsaw time (UTC+2)
+    // Create target date in Toronto time (UTC-4 during daylight saving time in June)
+    const targetDate = new Date(Date.UTC(2025, 5, 14, 0, 0, 0)); // 20:00 Toronto time (UTC-4)
     const now = new Date();
 
     // Calculate the time difference
