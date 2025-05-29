@@ -244,12 +244,7 @@ h1 {
         min-width: 50px;
     }
 
-    .page-footer {
-        font-size: 0.8rem;
-        padding: 0.8rem;
-    }
-
-    /* Mobile floating images - smaller and fewer */
+    /* Mobile floating images - much smaller to prevent cutoff */
     .floating-images-left,
     .floating-images-right {
         width: 20%;
@@ -257,37 +252,37 @@ h1 {
 
     .floating-item-left img,
     .floating-item-right img {
-        width: 80px;
-        height: 80px;
-        border-radius: 10px;
+        width: 50px;
+        height: 50px;
+        border-radius: 8px;
         border: 2px solid rgba(255, 255, 255, 0.8);
     }
     
     .paris-text {
-        font-size: 10px;
-        top: -20px;
+        font-size: 8px;
+        top: -15px;
         letter-spacing: 0.5px;
     }
     
     .french-flag {
-        font-size: 14px;
-        bottom: -15px;
+        font-size: 12px;
+        bottom: -12px;
     }
 
     /* Adjust positioning to prevent cutoff - keep images within container bounds */
-    .floating-item-left:nth-child(1) { left: 10px; }
-    .floating-item-left:nth-child(2) { left: 30px; }
-    .floating-item-left:nth-child(3) { left: 5px; }
-    .floating-item-left:nth-child(4) { left: 25px; }
-    .floating-item-left:nth-child(5) { left: 15px; }
-    .floating-item-left:nth-child(6) { left: 35px; }
+    .floating-item-left:nth-child(1) { left: 5px; }
+    .floating-item-left:nth-child(2) { left: 15px; }
+    .floating-item-left:nth-child(3) { left: 25px; }
+    .floating-item-left:nth-child(4) { left: 10px; }
+    .floating-item-left:nth-child(5) { left: 20px; }
+    .floating-item-left:nth-child(6) { left: 30px; }
 
-    .floating-item-right:nth-child(1) { right: 10px; }
-    .floating-item-right:nth-child(2) { right: 30px; }
-    .floating-item-right:nth-child(3) { right: 5px; }
-    .floating-item-right:nth-child(4) { right: 25px; }
-    .floating-item-right:nth-child(5) { right: 15px; }
-    .floating-item-right:nth-child(6) { right: 35px; }
+    .floating-item-right:nth-child(1) { right: 5px; }
+    .floating-item-right:nth-child(2) { right: 15px; }
+    .floating-item-right:nth-child(3) { right: 25px; }
+    .floating-item-right:nth-child(4) { right: 10px; }
+    .floating-item-right:nth-child(5) { right: 20px; }
+    .floating-item-right:nth-child(6) { right: 30px; }
 
     /* Hide some floating items on mobile for better performance */
     .floating-item-left:nth-child(n+7),
@@ -352,18 +347,18 @@ h1 {
 
     .floating-item-left img,
     .floating-item-right img {
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
     }
     
     .paris-text {
-        font-size: 8px;
-        top: -15px;
+        font-size: 6px;
+        top: -12px;
     }
     
     .french-flag {
-        font-size: 12px;
-        bottom: -12px;
+        font-size: 10px;
+        bottom: -10px;
     }
 
     /* Adjust positioning for very small screens - use pixel values */
